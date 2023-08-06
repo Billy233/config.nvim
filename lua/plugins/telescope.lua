@@ -7,6 +7,7 @@ map.set('n', '<leader>fb', tele.buffers, {})
 map.set('n', '<leader>fh', tele.help_tags, {})
 map.set('n', '<leader>of', tele.oldfiles, { desc = '[?] Find recently opened files' })
 
+-- setup fzf plugins --
 require('telescope').setup {
   extensions = {
     fzf = {
