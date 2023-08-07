@@ -136,6 +136,11 @@ _G.packer_plugins = {
     path = "/Users/billyshao/.local/share/nvim/site/pack/packer/start/competitest.nvim",
     url = "https://github.com/xeluxee/competitest.nvim"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/Users/billyshao/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "/Users/billyshao/.local/share/nvim/site/pack/packer/start/fidget.nvim",

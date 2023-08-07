@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   use 'folke/flash.nvim'
   use 'kamykn/spelunker.vim'
   use 'windwp/nvim-autopairs'
+  use 'glepnir/dashboard-nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvimdev/lspsaga.nvim'
   use 'CRAG666/code_runner.nvim'
@@ -37,7 +38,7 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'rainbowhxch/accelerated-jk.nvim'
   use 'nvim-treesitter/nvim-treesitter'
-  use {'j-hui/fidget.nvim', tag = 'legacy'}
+  use { 'j-hui/fidget.nvim', tag = 'legacy' }
 
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -61,14 +62,14 @@ return require('packer').startup(function(use)
   }
   use 'pocco81/true-zen.nvim'
   use { 'pocco81/auto-save.nvim',
-    config = function ()
+    config = function()
       require('auto-save').setup()
     end
   }
   use {
     'xeluxee/competitest.nvim',
     requires = 'MunifTanjim/nui.nvim',
-    config = function ()
+    config = function()
       require('competitest').setup()
     end
   }

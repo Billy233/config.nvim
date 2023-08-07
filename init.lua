@@ -15,6 +15,6 @@ require('plugins.bufferline')
 require('plugins.autopairs')
 require('plugins.catppuccin')
 require('plugins.telescope')
+require('plugins.dashboard')
 require('plugins.acc')
 require('plugins.code_runner')
-
