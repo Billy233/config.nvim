@@ -16,8 +16,13 @@ local mappings = {
   { from = '<leader>ra', to = '<cmd>CompetiTest add_testcase<CR>',      mode = 'n' },
   { from = '<leader>R',  to = '<cmd>CompetiTest receive testcases<CR>', mode = 'n' },
   { from = '<leader>d',  to = 'CompetiTest delete_testcase',            mode = 'n' },
+  -- True-zen
+  { from = '<leader>zf', to = '<cmd>TZFocus<CR>',                           mode = 'n' },
+  { from = '<leader>zm', to = '<cmd>TZMinimalist<CR>',                      mode = 'n' },
+  { from = '<leader>za', to = '<cmd>TZAtaraxis<CR>',                        mode = 'n' },
 }
 
-for _,mapping in ipairs(mappings) do
+for _, mapping in ipairs(mappings) do
   map.set(mapping.mode, mapping.from, mapping.to, { noremap = true })
 end
+

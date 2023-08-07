@@ -1,6 +1,7 @@
 require('core.options')
 require('core.keymaps')
 
+-- requirplugins
 require('plugins.plugins-setup')
 require('plugins.lualine')
 require('plugins.nvim-tree')

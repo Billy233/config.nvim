@@ -94,7 +94,7 @@ require("flash").setup({
 })
 
 -- press s to search regularly --
-vim.keymap.set({ 'n', 'v', 'i' }, 's', function()
+vim.keymap.set({ 'n', 'v' }, 's', function()
   require("flash").jump({
     search = {
       mode = "search",

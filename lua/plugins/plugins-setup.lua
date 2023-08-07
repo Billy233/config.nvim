@@ -12,7 +12,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
--- autoUpdate --
+-- autoUpdate when file saved --
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { 'nvim-lua/plenary.nvim' }
   }
+  use 'pocco81/true-zen.nvim'
   use { 'pocco81/auto-save.nvim',
     config = function ()
       require('auto-save').setup()
