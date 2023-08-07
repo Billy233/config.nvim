@@ -54,7 +54,6 @@ return require('packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
 
   use { 'catppuccin/nvim', as = 'catppuccin' }
-  use { 'ellisonleao/glow.nvim', config = function() require('glow').setup() end }
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
