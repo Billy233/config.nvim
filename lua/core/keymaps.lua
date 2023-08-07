@@ -2,23 +2,22 @@
 vim.g.mapleader = ' '
 
 local map = vim.keymap
+local mappings = {
+  -- Normal
+  { from = '<leader>j',  to = '<ESC>',                                  mode = 'i' },
+  { from = 'J',          to = ":m '>+1<CR>gv=gv",                       mode = 'v' },
+  { from = 'K',          to = ":m '<-2<CR>gv=gv",                       mode = 'v' },
+  { from = '<leader>sv', to = '<C-w>v',                                 mode = 'n' },
+  { from = '<leader>sh', to = '<C-w>h',                                 mode = 'n' },
+  { from = '<leader>nh', to = '<cmd>nohl<CR>',                          mode = 'n' },
+  { from = '<leader>e',  to = '<cmd>NvimTreeToggle<CR>',                mode = 'n' },
+  -- CompetiTest
+  { from = '<leader>r',  to = '<cmd>CompetiTest run<CR>',               mode = 'n' },
+  { from = '<leader>ra', to = '<cmd>CompetiTest add_testcase<CR>',      mode = 'n' },
+  { from = '<leader>R',  to = '<cmd>CompetiTest receive testcases<CR>', mode = 'n' },
+  { from = '<leader>d',  to = 'CompetiTest delete_testcase',            mode = 'n' },
+}
 
-map.set('i', '<leader>j', '<ESC>')
-
-map.set('v', 'J', ":m '>+1<CR>gv=gv")
-map.set('v', 'K', ":m '<-2<CR>gv=gv")
-
-map.set('n', '<leader>sv', '<C-w>v')
-map.set('n', '<leader>sh', '<C-w>s')
-
-map.set('n', '<leader>nh', '<cmd>nohl<CR>')
-map.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
-map.set('n', '<leader>s', '<cmd>write<CR>')
-
--- CompetiTest
-map.set('n', '<leader>r', '<cmd>CompetiTest run<CR>')
-map.set('n', '<leader>ra', '<cmd>CompetiTest add_testcase<CR>')
-map.set('n', '<leader>R', '<cmd>CompetiTest receive testcases<CR>')
-map.set('n', '<leader>d', function ()
-end)
-
+for _,mapping in ipairs(mappings) do
+  map.set(mapping.mode, mapping.from, mapping.to, { noremap = true })
+end
