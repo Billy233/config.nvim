@@ -58,14 +58,19 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
-    requires = { 'nvim-lua/plenary.nvim' },
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  use { 'pocco81/auto-save.nvim',
     config = function ()
-      require('competitest').setup()
+      require('auto-save').setup()
     end
   }
   use {
     'xeluxee/competitest.nvim',
     requires = 'MunifTanjim/nui.nvim',
+    config = function ()
+      require('competitest').setup()
+    end
   }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
